@@ -1,0 +1,68 @@
+    <!-- Begin сallback popup -->
+      <div
+        id="сallback_popup"
+        class="popup_style popup_style_sally open_popup"
+        style="display: none"
+      >
+        <div class="popup">
+          <div class="popup_content">
+            <h4 class="popup_title">We will call you</h4>
+            <form action="#!" method="post" class="сallback_popup_form">
+              <!-- Begin hidden Field for send form -->
+              <input type="hidden" name="form_subject" value="Pop up form" />
+              <!-- End hidden Field for send form -->
+              <div class="form-field">
+                <label for="popup-field-name" class="form-field-label"
+                  >Your name</label
+                >
+                <input
+                  type="text"
+                  class="form-field-input"
+                  name="NameCallBack"
+                  value=""
+                  autocomplete="off"
+                  required="required"
+                  id="popup-field-name"
+                />
+              </div>
+              <div class="form-field">
+                <label for="popup-field-phone" class="form-field-label"
+                  >Your phone</label
+                >
+                <input
+                  type="tel"
+                  class="form-field-input mask-phone"
+                  name="PhoneCallBack"
+                  value=""
+                  autocomplete="off"
+                  required="required"
+                  id="popup-field-phone"
+                />
+              </div>
+              <div class="form-field form-field-checkbox">
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    class="checkbox-input"
+                    name="checkboxLogin"
+                    id="checkbox-popup"
+                  />
+                  <label for="checkbox-popup" class="checkbox-label"
+                    >I agree to the transfer of personal data in accordance with
+                    the <a href="privacy-policy.html">Privacy Policy</a></label
+                  >
+                </div>
+              </div>
+              <div class="form-btn form-btn-wide">
+                <button type="submit" class="btn ripple">
+                  <span>Waiting for a Сall</span>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="сallback_popup_close popup_close">
+            <i class="material-icons md-24">close</i>
+          </div>
+        </div>
+      </div>
+      <!-- End сallback popup -->
