@@ -2,23 +2,73 @@
 layout: default
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+<main class="main">
+  <div class="main-inner">
+    {% include mob_menu.html %} {% include header.html %}
 
-<div class="container">
-  <h1>404</h1>
+    <!-- Begin bread crumbs -->
+    <nav class="bread-crumbs">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <ul class="bread-crumbs-list">
+              <li>
+                <a href="index.html">Home</a>
+                <i class="material-icons md-18">chevron_right</i>
+              </li>
+              <li><a href="#!">404</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End bread crumbs -->
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-heading heading-center">
+              <div class="section-subheading">
+                Sorry, but the page was not found
+              </div>
+              <h1 class="page-title page-404-title">404</h1>
+              <p class="section-desc">
+                You may have mistyped the address or the page may have moved
+              </p>
+            </div>
+            <div class="wrap-btn align-items-center justify-content-center">
+              <a href="/" class="btn btn-with-icon ripple">
+                <span>Go to home page</span>
+                <svg
+                  class="btn-icon-right"
+                  viewBox="0 0 13 9"
+                  width="13"
+                  height="9"
+                >
+                  <use xlink:href="assets/img/sprite.svg#arrow-right"></use>
+                </svg>
+              </a>
+              <a
+                href="contact-us.html"
+                class="btn btn-border btn-with-icon ripple"
+              >
+                <span>Contact us</span>
+                <svg
+                  class="btn-icon-right"
+                  viewBox="0 0 13 9"
+                  width="13"
+                  height="9"
+                >
+                  <use xlink:href="assets/img/sprite.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include footer.html %} {%include imports/callback_popup.html %} {%include
+  imports/cookie_message.html %}
+</main>
