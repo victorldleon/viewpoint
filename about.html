@@ -6,12 +6,72 @@ keywords: Claims
 ---
 
 <main class="main">
-    <div class="main-inner">
-        {% include mob_menu.html %}
-        {% include header.html %}
+  <div class="main-inner">
+    {% include mob_menu.html %} {% include header.html %}
+    <!-- Begin bread crumbs -->
+    <nav class="bread-crumbs">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <ul class="bread-crumbs-list">
+              <li>
+                <a href="index.html">Home</a>
+                <i class="material-icons md-18">chevron_right</i>
+              </li>
+              <li><a href="#!">About us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End bread crumbs -->
+
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-heading heading-center">
+              <div class="section-subheading">MORE INFO</div>
+              <h1>About us</h1>
+            </div>
+            <div class="content">
+              <div class="img-style">
+                <img src="assets/img/about-img.jpg" alt="" />
+              </div>
+              <h2>Get the payout you deserve</h2>
+              <p>
+                Our mission at Viewpoint is to look at claims from your
+                perspective and ensure contractors across the nation get paid
+                what they deserve on every job completed.
+              </p>
+              <p>
+                By always leading with clear communication and honesty, we
+                strive to simplify the claim handling process so your company
+                can spend less time doing insurance paperwork and focus on what
+                you do best.
+              </p>
+              <p>
+                As previous restoration business owners ourselves, we
+                experienced first hand how proper supplementing of each claim
+                positively impacted our bottom line. It was our responsibility
+                to be well versed in the supplementing process and most
+                importantly, be willing to negotiate in order to reach a 15%-30%
+                increase in the overall value of the claim.
+              </p>
+              <p>
+                The supplementing process is often overlooked due to either lack
+                of time, education or interest. After understanding how critical
+                this step can be to a company’s bottom line, Francisco and
+                Cristobal set forth to form Viewpoint Claims Solutions to help
+                roofing companies reach their fullest potential on each claim.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    {% include footer.html %}
-    {%include imports/callback_popup.html %}
-    {%include imports/cookie_message.html %}
+  </div>
+  {% include footer.html %} {%include imports/callback_popup.html %} {%include
+  imports/cookie_message.html %}
 </main>
 <!-- End main -->
