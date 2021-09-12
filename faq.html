@@ -6,12 +6,127 @@ keywords: Claims
 ---
 
 <main class="main">
-    <div class="main-inner">
-        {% include mob_menu.html %}
-        {% include header.html %}
+  <div class="main-inner">
+    {% include mob_menu.html %} {% include header.html %}
+
+    <!-- Begin bread crumbs -->
+    <nav class="bread-crumbs">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <ul class="bread-crumbs-list">
+              <li>
+                <a href="index.html">Home</a>
+                <i class="material-icons md-18">chevron_right</i>
+              </li>
+              <li><a href="#!">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End bread crumbs -->
+
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-heading heading-center">
+              <h1>FAQ</h1>
+            </div>
+            <div class="accordion">
+              <div class="row gutters-default">
+                <div class="col-lg-6 col-12">
+                  <ul class="accordion-list">
+                    <li class="accordion-item section-bgc">
+                      <div class="accordion-trigger">
+                        Why is supplementing needed?
+                      </div>
+                      <div class="accordion-content content">
+                        <p>
+                          Most adjusters are honest and ethical, however most of
+                          them have never been in the industry or worked as
+                          contractors, therefore most of the time they miss line
+                          items that are crucial to complete the work. The
+                          burden of proof falls on the contractor to prove why
+                          additional line items are needed to complete the work.
+                          Therefore it is crucial to have someone with
+                          experience by your side.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="accordion-item section-bgc">
+                      <div class="accordion-trigger">
+                        What is the average claim increase?
+                      </div>
+                      <div class="accordion-content content">
+                        <p>
+                          Increase in a claim varies greatly on different
+                          factors, from type of material being used, insurance
+                          company, to the state in which the work is being
+                          performed. However our average increase in a claim is
+                          about 15-30% of the initial claim value.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="accordion-item section-bgc">
+                      <div class="accordion-trigger">
+                        What is the average turnaround time on files?
+                      </div>
+                      <div class="accordion-content content">
+                        <p>
+                          The average turnaround time on files is about 14 days
+                          from submittal. The insurance supplementing process is
+                          a give and take a negotiation process. Some of our
+                          clients prefer to close out files quickly and some
+                          prefer for us to take our time on files and push for
+                          as much of an increase as we can. We tailor to your
+                          company's needs!
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6 col-12">
+                  <ul class="accordion-list">
+                    <li class="accordion-item section-bgc">
+                      <div class="accordion-trigger">
+                        How do we accommodate different companies?
+                      </div>
+                      <div class="accordion-content content">
+                        <p>
+                          At Viewpoint Claim Solutions we integrate into
+                          different companies CRM systems like Jobnimbus and
+                          Salesforce to keep you updated on each step of the
+                          claims process.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="accordion-item section-bgc">
+                      <div class="accordion-trigger">
+                        When do I start supplementing a job?
+                      </div>
+                      <div class="accordion-content content">
+                        <p>
+                          We always advise clients to start supplementing a job
+                          before the work starts to make sure we get as much as
+                          the supplementing approved as we can before work is
+                          started. Once work is completed and production
+                          pictures are available we do our final supplement for
+                          things that we might have missed.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    {% include footer.html %}
-    {%include imports/callback_popup.html %}
-    {%include imports/cookie_message.html %}
+  </div>
+  {% include footer.html %} {%include imports/callback_popup.html %} {%include
+  imports/cookie_message.html %}
 </main>
 <!-- End main -->
