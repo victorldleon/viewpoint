@@ -33,7 +33,7 @@
 			this.lightGallery();
 			this.scrollToFixed();
 			this.carusels();
-			this.forms();
+			// this.forms();
 			this.isotopeProjects();
 			this.isotopeGallery();
 			this.isotopeGalleryMasonry();
@@ -767,391 +767,391 @@
 
 		},
 
-		forms: function() {
+		// forms: function() {
 
-			var ajaxurl = "/mail.php";
+		// 	var ajaxurl = "https://formspree.io/f/xvodlwpr";
 
-			$.validator.addMethod("customemail", function (value, element) {
-				return /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(value);
-			},
-				"The email is not a valid email."
-			);
+		// 	$.validator.addMethod("customemail", function (value, element) {
+		// 		return /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(value);
+		// 	},
+		// 		"The email is not a valid email."
+		// 	);
 			
-			$(".сallback_popup_form").validate({
-				rules: {
-					NameCallBack: {
-					required: true,
-					minlength: 2
-					},
-					PhoneCallBack: {
-					required: true
-					}
-				},
-				messages: {
-					NameCallBack: {
-					required: "The name field is required.",
-					},
-					PhoneCallBack: {
-					required: "The phone field is required.",
-					}
-				},
-				submitHandler: function(form) {
-					var th = $(form),
-						popup = th.closest(".popup_style"),
-						close = popup.find(".popup_close");
-					close.click();
+		// 	$(".сallback_popup_form").validate({
+		// 		rules: {
+		// 			NameCallBack: {
+		// 			required: true,
+		// 			minlength: 2
+		// 			},
+		// 			PhoneCallBack: {
+		// 			required: true
+		// 			}
+		// 		},
+		// 		messages: {
+		// 			NameCallBack: {
+		// 			required: "The name field is required.",
+		// 			},
+		// 			PhoneCallBack: {
+		// 			required: "The phone field is required.",
+		// 			}
+		// 		},
+		// 		submitHandler: function(form) {
+		// 			var th = $(form),
+		// 				popup = th.closest(".popup_style"),
+		// 				close = popup.find(".popup_close");
+		// 			close.click();
 
-					$.ajax({
-						type: "POST",
-						url: ajaxurl,
-						data: th.serialize()
-					}).done(function() {
+		// 			$.ajax({
+		// 				type: "POST",
+		// 				url: ajaxurl,
+		// 				data: th.serialize()
+		// 			}).done(function() {
 
-						//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
-						app.customAlert("Successfully sent!", 4000, "success");
+		// 				//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
+		// 				app.customAlert("Successfully sent!", 4000, "success");
 
-						setTimeout(function() {
-							th.trigger("reset");
-							$(".form-field").removeClass("focus");
-						}, 1000);
-					});
+		// 				setTimeout(function() {
+		// 					th.trigger("reset");
+		// 					$(".form-field").removeClass("focus");
+		// 				}, 1000);
+		// 			});
 
-				}
-			});
+		// 		}
+		// 	});
 			
 
-			$(".contact-form").validate({
-				rules: {
-					ContactName: {
-					required: true,
-					minlength: 2
-					},
-					ContactPhone: {
-					required: true
-					},
-					ContactEmail: {
-						required: true,
-						email: true,
-						customemail: true
-					},
-				},
-				messages: {
-					ContactName: {
-					required: "The name field is required.",
-					},
-					ContactPhone: {
-					required: "The phone field is required.",
-					},
-					ContactEmail: {
-						required: "The email field is required.",
-						email: "The email field is required.",
-						customemail: "The email is not a valid email."
-					},
-				},
-				submitHandler: function(form) {
-					var th = $(form);
+		// 	$(".contact-form").validate({
+		// 		rules: {
+		// 			ContactName: {
+		// 			required: true,
+		// 			minlength: 2
+		// 			},
+		// 			ContactPhone: {
+		// 			required: true
+		// 			},
+		// 			ContactEmail: {
+		// 				required: true,
+		// 				email: true,
+		// 				customemail: true
+		// 			},
+		// 		},
+		// 		messages: {
+		// 			ContactName: {
+		// 			required: "The name field is required.",
+		// 			},
+		// 			ContactPhone: {
+		// 			required: "The phone field is required.",
+		// 			},
+		// 			ContactEmail: {
+		// 				required: "The email field is required.",
+		// 				email: "The email field is required.",
+		// 				customemail: "The email is not a valid email."
+		// 			},
+		// 		},
+		// 		submitHandler: function(form) {
+		// 			var th = $(form);
 
-					$.ajax({
-						type: "POST",
-						url: ajaxurl,
-						data: th.serialize()
-					}).done(function() {
+		// 			$.ajax({
+		// 				type: "POST",
+		// 				url: ajaxurl,
+		// 				data: th.serialize()
+		// 			}).done(function() {
 
-						//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
-						app.customAlert("Successfully sent!", 4000, "success");
+		// 				//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
+		// 				app.customAlert("Successfully sent!", 4000, "success");
 
-						setTimeout(function() {
-							th.trigger("reset");
-							$(".form-field").removeClass("focus");
-						}, 1000);
-					});
+		// 				setTimeout(function() {
+		// 					th.trigger("reset");
+		// 					$(".form-field").removeClass("focus");
+		// 				}, 1000);
+		// 			});
 
-				}
-			});
+		// 		}
+		// 	});
 			
-			$(".footer-subscribe").validate({
-				rules: {
-					ContactEmail: {
-						required: true,
-						email: true,
-						customemail: true
-					},
-				},
-				messages: {
-					ContactEmail: {
-						required: "The email field is required.",
-						email: "The email field is required.",
-						customemail: "The email is not a valid email."
-					},
-				},
-				submitHandler: function(form) {
-					var th = $(form);
+		// 	$(".footer-subscribe").validate({
+		// 		rules: {
+		// 			ContactEmail: {
+		// 				required: true,
+		// 				email: true,
+		// 				customemail: true
+		// 			},
+		// 		},
+		// 		messages: {
+		// 			ContactEmail: {
+		// 				required: "The email field is required.",
+		// 				email: "The email field is required.",
+		// 				customemail: "The email is not a valid email."
+		// 			},
+		// 		},
+		// 		submitHandler: function(form) {
+		// 			var th = $(form);
 			
-					//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
-					app.customAlert("Successfully sent!", 4000, "success");
+		// 			//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
+		// 			app.customAlert("Successfully sent!", 4000, "success");
 			
-					setTimeout(function() {
-						th.trigger("reset");
-						$(".form-field").removeClass("focus");
-					}, 1000);
+		// 			setTimeout(function() {
+		// 				th.trigger("reset");
+		// 				$(".form-field").removeClass("focus");
+		// 			}, 1000);
 		
-				}
-			});
+		// 		}
+		// 	});
 
-			$(".login-form").validate({
-				rules: {
-					LoginName: {
-						required: true
-					},
-					loginPassword: {
-						required: true,
-						minlength : 6
-					}
-				},
-				messages: {
-					LoginName: {
-						required: "The login field is required.",
-					},
-					loginPassword: {
-						required: "The password field is required.",
-					}
-				},
-				submitHandler: function(form) {
-					var th = $(form);
+		// 	$(".login-form").validate({
+		// 		rules: {
+		// 			LoginName: {
+		// 				required: true
+		// 			},
+		// 			loginPassword: {
+		// 				required: true,
+		// 				minlength : 6
+		// 			}
+		// 		},
+		// 		messages: {
+		// 			LoginName: {
+		// 				required: "The login field is required.",
+		// 			},
+		// 			loginPassword: {
+		// 				required: "The password field is required.",
+		// 			}
+		// 		},
+		// 		submitHandler: function(form) {
+		// 			var th = $(form);
 			
-					//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
-					app.customAlert("Successfully sent!", 4000, "success");
+		// 			//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
+		// 			app.customAlert("Successfully sent!", 4000, "success");
 			
-					setTimeout(function() {
-						th.trigger("reset");
-						$(".form-field").removeClass("focus");
-					}, 1000);
+		// 			setTimeout(function() {
+		// 				th.trigger("reset");
+		// 				$(".form-field").removeClass("focus");
+		// 			}, 1000);
 		
-				}
-			});
+		// 		}
+		// 	});
 
-			$(".order-form").validate({
-				rules: {
-					orderName: {
-					required: true,
-					minlength: 2
-					},
-					orderPhone: {
-					required: true
-					}
-				},
-				messages: {
-					orderName: {
-					required: "The name field is required.",
-					},
-					orderPhone: {
-					required: "The phone field is required.",
-					}
-				},
-				submitHandler: function(form) {
-					var th = $(form);
+		// 	$(".order-form").validate({
+		// 		rules: {
+		// 			orderName: {
+		// 			required: true,
+		// 			minlength: 2
+		// 			},
+		// 			orderPhone: {
+		// 			required: true
+		// 			}
+		// 		},
+		// 		messages: {
+		// 			orderName: {
+		// 			required: "The name field is required.",
+		// 			},
+		// 			orderPhone: {
+		// 			required: "The phone field is required.",
+		// 			}
+		// 		},
+		// 		submitHandler: function(form) {
+		// 			var th = $(form);
 
-					$.ajax({
-						type: "POST",
-						url: ajaxurl,
-						data: th.serialize()
-					}).done(function() {
+		// 			$.ajax({
+		// 				type: "POST",
+		// 				url: ajaxurl,
+		// 				data: th.serialize()
+		// 			}).done(function() {
 						
-						//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
-						app.customAlert("Successfully sent!", 4000, "success");
+		// 				//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
+		// 				app.customAlert("Successfully sent!", 4000, "success");
 
-						setTimeout(function() {
-							th.trigger("reset");
-							$(".form-field").removeClass("focus");
-						}, 1000);
-					});
+		// 				setTimeout(function() {
+		// 					th.trigger("reset");
+		// 					$(".form-field").removeClass("focus");
+		// 				}, 1000);
+		// 			});
 
-				}
-			});
+		// 		}
+		// 	});
 
-			$(".subscribe-bg-form").validate({
-				rules: {
-					subscribeBgEmail: {
-						required: true,
-						email: true,
-						customemail: true
-					}
-				},
-				messages: {
-					subscribeBgEmail: {
-						required: "The email field is required.",
-						email: "The email field is required.",
-						customemail: "The email is not a valid email."
-					}
-				},
-				submitHandler: function(form) {
-					var th = $(form);
+		// 	$(".subscribe-bg-form").validate({
+		// 		rules: {
+		// 			subscribeBgEmail: {
+		// 				required: true,
+		// 				email: true,
+		// 				customemail: true
+		// 			}
+		// 		},
+		// 		messages: {
+		// 			subscribeBgEmail: {
+		// 				required: "The email field is required.",
+		// 				email: "The email field is required.",
+		// 				customemail: "The email is not a valid email."
+		// 			}
+		// 		},
+		// 		submitHandler: function(form) {
+		// 			var th = $(form);
 
-					//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
-					app.customAlert("Successfully sent!", 4000, "success");
+		// 			//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
+		// 			app.customAlert("Successfully sent!", 4000, "success");
 
-					setTimeout(function() {
-						th.trigger("reset");
-						$(".form-field").removeClass("focus");
-					}, 1000);
-				}
-			});
+		// 			setTimeout(function() {
+		// 				th.trigger("reset");
+		// 				$(".form-field").removeClass("focus");
+		// 			}, 1000);
+		// 		}
+		// 	});
 
-			$(".mailchimp-form").validate({
-				rules: {
-					mailchimpEmail: {
-						required: true,
-						email: true,
-						customemail: true
-					}
-				},
-				messages: {
-					mailchimpEmail: {
-						required: "The email field is required.",
-						email: "The email field is required.",
-						customemail: "The email is not a valid email."
-					}
-				},
-				submitHandler: function(form) {
-					var th = $(form);
+		// 	$(".mailchimp-form").validate({
+		// 		rules: {
+		// 			mailchimpEmail: {
+		// 				required: true,
+		// 				email: true,
+		// 				customemail: true
+		// 			}
+		// 		},
+		// 		messages: {
+		// 			mailchimpEmail: {
+		// 				required: "The email field is required.",
+		// 				email: "The email field is required.",
+		// 				customemail: "The email is not a valid email."
+		// 			}
+		// 		},
+		// 		submitHandler: function(form) {
+		// 			var th = $(form);
 
-					//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
-					app.customAlert("Successfully sent!", 4000, "success");
+		// 			//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
+		// 			app.customAlert("Successfully sent!", 4000, "success");
 
-					setTimeout(function() {
-						th.trigger("reset");
-						$(".form-field").removeClass("focus");
-					}, 1000);
-				}
-			});
+		// 			setTimeout(function() {
+		// 				th.trigger("reset");
+		// 				$(".form-field").removeClass("focus");
+		// 			}, 1000);
+		// 		}
+		// 	});
 
-			$(".cm-form").validate({
-				rules: {
-					cmEmail: {
-						required: true,
-						email: true,
-						customemail: true
-					}
-				},
-				messages: {
-					cmEmail: {
-						required: "The email field is required.",
-						email: "The email field is required.",
-						customemail: "The email is not a valid email."
-					}
-				},
-				submitHandler: function(form) {
-					var th = $(form);
+		// 	$(".cm-form").validate({
+		// 		rules: {
+		// 			cmEmail: {
+		// 				required: true,
+		// 				email: true,
+		// 				customemail: true
+		// 			}
+		// 		},
+		// 		messages: {
+		// 			cmEmail: {
+		// 				required: "The email field is required.",
+		// 				email: "The email field is required.",
+		// 				customemail: "The email is not a valid email."
+		// 			}
+		// 		},
+		// 		submitHandler: function(form) {
+		// 			var th = $(form);
 
-					//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
-					app.customAlert("Successfully sent!", 4000, "success");
+		// 			//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
+		// 			app.customAlert("Successfully sent!", 4000, "success");
 
-					setTimeout(function() {
-						th.trigger("reset");
-						$(".form-field").removeClass("focus");
-					}, 1000);
-				}
-			});
+		// 			setTimeout(function() {
+		// 				th.trigger("reset");
+		// 				$(".form-field").removeClass("focus");
+		// 			}, 1000);
+		// 		}
+		// 	});
 
-			$(".comming-soon-form").validate({
-				rules: {
-					commingSoonEmail: {
-						required: true,
-						email: true,
-						customemail: true
-					}
-				},
-				messages: {
-					commingSoonEmail: {
-						required: "The email field is required.",
-						email: "The email field is required.",
-						customemail: "The email is not a valid email."
-					}
-				},
-				submitHandler: function(form) {
-					var th = $(form);
+		// 	$(".comming-soon-form").validate({
+		// 		rules: {
+		// 			commingSoonEmail: {
+		// 				required: true,
+		// 				email: true,
+		// 				customemail: true
+		// 			}
+		// 		},
+		// 		messages: {
+		// 			commingSoonEmail: {
+		// 				required: "The email field is required.",
+		// 				email: "The email field is required.",
+		// 				customemail: "The email is not a valid email."
+		// 			}
+		// 		},
+		// 		submitHandler: function(form) {
+		// 			var th = $(form);
 
-					//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
-					app.customAlert("Successfully sent!", 4000, "success");
+		// 			//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
+		// 			app.customAlert("Successfully sent!", 4000, "success");
 
-					setTimeout(function() {
-						th.trigger("reset");
-						$(".form-field").removeClass("focus");
-					}, 1000);
-				}
-			});
+		// 			setTimeout(function() {
+		// 				th.trigger("reset");
+		// 				$(".form-field").removeClass("focus");
+		// 			}, 1000);
+		// 		}
+		// 	});
 
-			$(".comments-form").validate({
-				rules: {
-					CommentsName: {
-						required: true,
-						minlength: 2
-					},
-					CommentsEmail: {
-						required: true,
-						email: true,
-						customemail: true
-					},
-					CommentsMessage: {
-						required: true,
-						minlength: 15
-					},
-				},
-				messages: {
-					CommentsName: {
-						required: "The name field is required."
-					},
-					CommentsEmail: {
-						required: "The email field is required.",
-						email: "The email field is required.",
-						customemail: "The email is not a valid email."
-					},
-					CommentsMessage: {
-						required: "The message field is required."
-					}
-				},
-				submitHandler: function(form) {
-					var th = $(form);
+		// 	$(".comments-form").validate({
+		// 		rules: {
+		// 			CommentsName: {
+		// 				required: true,
+		// 				minlength: 2
+		// 			},
+		// 			CommentsEmail: {
+		// 				required: true,
+		// 				email: true,
+		// 				customemail: true
+		// 			},
+		// 			CommentsMessage: {
+		// 				required: true,
+		// 				minlength: 15
+		// 			},
+		// 		},
+		// 		messages: {
+		// 			CommentsName: {
+		// 				required: "The name field is required."
+		// 			},
+		// 			CommentsEmail: {
+		// 				required: "The email field is required.",
+		// 				email: "The email field is required.",
+		// 				customemail: "The email is not a valid email."
+		// 			},
+		// 			CommentsMessage: {
+		// 				required: "The message field is required."
+		// 			}
+		// 		},
+		// 		submitHandler: function(form) {
+		// 			var th = $(form);
 
-					//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
-					app.customAlert("Successfully sent!", 4000, "success");
+		// 			//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
+		// 			app.customAlert("Successfully sent!", 4000, "success");
 
-					setTimeout(function() {
-						th.trigger("reset");
-						$(".form-field").removeClass("focus");
-					}, 1000);
-				}
-			});
+		// 			setTimeout(function() {
+		// 				th.trigger("reset");
+		// 				$(".form-field").removeClass("focus");
+		// 			}, 1000);
+		// 		}
+		// 	});
 
-			$(".subscribe-news-form").validate({
-				rules: {
-					CommentsEmail: {
-						required: true,
-						email: true,
-						customemail: true
-					}
-				},
-				messages: {
-					CommentsEmail: {
-						required: "The email field is required.",
-						email: "The email field is required.",
-						customemail: "The email is not a valid email."
-					}
-				},
-				submitHandler: function(form) {
-					var th = $(form);
+		// 	$(".subscribe-news-form").validate({
+		// 		rules: {
+		// 			CommentsEmail: {
+		// 				required: true,
+		// 				email: true,
+		// 				customemail: true
+		// 			}
+		// 		},
+		// 		messages: {
+		// 			CommentsEmail: {
+		// 				required: "The email field is required.",
+		// 				email: "The email field is required.",
+		// 				customemail: "The email is not a valid email."
+		// 			}
+		// 		},
+		// 		submitHandler: function(form) {
+		// 			var th = $(form);
 
-					//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
-					app.customAlert("Successfully sent!", 4000, "success");
+		// 			//customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
+		// 			app.customAlert("Successfully sent!", 4000, "success");
 
-					setTimeout(function() {
-						th.trigger("reset");
-						$(".form-field").removeClass("focus");
-					}, 1000);
-				}
-			});
+		// 			setTimeout(function() {
+		// 				th.trigger("reset");
+		// 				$(".form-field").removeClass("focus");
+		// 			}, 1000);
+		// 		}
+		// 	});
 
-		},
+		// },
 
 		isotopeProjects: function() {
 
